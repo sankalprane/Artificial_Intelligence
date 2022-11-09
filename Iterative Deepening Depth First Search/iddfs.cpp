@@ -3,8 +3,6 @@ using namespace std;
 
 int expanded_nodes = 0;
 
-
-
 vector<vector<int>> goal = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,0}};
 
 // Used to move in 4 Directions
@@ -91,7 +89,7 @@ int depth_limited_search(node* start, int l,set<vector<vector<int>>> hashset );
 
 // Used to increment and use depth limited for increasing depths
 int iterative_deepening_search(node *start) {
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; ; i++) {
         // hashset.clear();
         set<vector<vector<int>>> hashset;
         int result = depth_limited_search(start, i, hashset);
